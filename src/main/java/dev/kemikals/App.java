@@ -8,7 +8,9 @@ import java.io.IOException;
 public class App {
 
     public static void main(String[] args) throws IOException {
+
         String query = "http://api.openweathermap.org/data/2.5/weather?q=%s&units=imperial&APPID=%s";
+
 
         System.out.print("Enter a city: ");
         Scanner input = new Scanner(System.in);
