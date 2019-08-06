@@ -10,7 +10,7 @@ import java.io.IOException;
 public class App {
 
     public static void main(String[] args) throws IOException {
-        String query = "http://api.openweathermap.org/data/2.5/weather?q=%s&units=imperial&APPID=b39cd928e99188f7cbc9059fd5dfa761";
+        String query = "http://api.openweathermap.org/data/2.5/weather?q=%s&units=imperial&APPID=";
 
         System.out.print("Enter a city: ");
         Scanner input = new Scanner(System.in);
