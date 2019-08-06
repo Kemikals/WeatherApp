@@ -1,21 +1,20 @@
 package dev.kemikals;
+
 import java.net.*;
 import java.util.Scanner;
-import com.google.gson.*;
+import com.google.gson.Gson;
 import java.io.IOException;
-/**
- * Hello world!
- *
- */
+
 public class App {
 
     public static void main(String[] args) throws IOException {
-        String query = "http://api.openweathermap.org/data/2.5/weather?q=%s&units=imperial&APPID=b39cd928e99188f7cbc9059fd5dfa761";
+        String query = "http://api.openweathermap.org/data/2.5/weather?q=%s&units=imperial&APPID=%s";
 
         System.out.print("Enter a city: ");
         Scanner input = new Scanner(System.in);
         String city = input.nextLine();
-        URL url = new URL(String.format(query, city.trim()));
+        Config config = new Config();
+        URL url = new URL(String.format(query, city.trim(), config.getKey()));
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
