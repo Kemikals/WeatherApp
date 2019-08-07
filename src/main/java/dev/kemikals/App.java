@@ -39,9 +39,8 @@ public class App {
 
         JFrame jframe = new JFrame();
         URL imageUrl = new URL(String.format(heatMapQuery, config.getKey()));
-        HttpURLConnection conn = (HttpURLConnection) imageUrl.openConnection();
-        conn.connect();
-        System.out.println(imageUrl);
+       
+        
         Image image = ImageIO.read(imageUrl.openStream());
         ImageIcon image2 = new ImageIcon(image);
         JLabel label = new JLabel(image2);
