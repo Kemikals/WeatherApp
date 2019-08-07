@@ -35,6 +35,7 @@ public class App {
         System.out.println("  Min: " + weather.getMain().getTempMin());
         System.out.println("Visibility: " + weather.getVisibility());
         System.out.println("Wind Speed: " + weather.getWind().getSpeed());
+        System.out.println(weather.getSys().getSunrise());
 
     }
 }
